@@ -26,7 +26,8 @@ const gridTraveler = (m, n) => {
  * number of ways to travel in a 2*3 grid will be same as in a 3*2 grid - flipping of arguments doesn't effect here
  * i.e gridTraveller(1,2) is same as gridTraveller(2,1)
  * using memoization -
- * O(n) time | O(n) space
+ * O(n * m) time || O(n + m) space
+ * time - for any particular m and n, maximum number of nodes can be m * n, i.e possible m * n function calls
  */
 
 const gridTraveller = (m, n, memo = {}) => {
