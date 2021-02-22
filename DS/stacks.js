@@ -4,9 +4,9 @@
 // using array methods for stacks
 
 var letters = [];
-var word = "racecar";
+var word = 'racecar';
 // word = "anubhav";
-var rword = "";
+var rword = '';
 
 // put letters of word into stack
 for (var i = 0; i < word.length; i++) {
@@ -17,7 +17,7 @@ for (var i = 0; i < word.length; i++) {
 // console.log("letters ", letters);
 
 // pop off the stack in reverse order
-for (var i = 0; i < word.length; i++) {
+for (let i = 0; i < word.length; i++) {
   rword += letters.pop();
 }
 // console.log("rword ", rword);
@@ -60,17 +60,17 @@ var Stack = function () {
 };
 
 var myStack = new Stack();
-myStack.push("A");
-myStack.push("B");
-myStack.push("C");
-myStack.push("D");
+myStack.push('A');
+myStack.push('B');
+myStack.push('C');
+myStack.push('D');
 /**
  storage { 
      0 : A, 1 : B, 2 : C, 3 : D
  }
  count = 4
  */
-console.log("before pop ", myStack.peek(), myStack.size());
+console.log('before pop ', myStack.peek(), myStack.size());
 console.log(myStack.pop());
 
 console.log(myStack.peek());
