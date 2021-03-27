@@ -1,7 +1,13 @@
+// Traversing the array
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// console.log(arr);
 
-// array methods
+// * for...of - used for looping over iterable objects(array, string, map, set)
+let elements = ['a', 'b', 'c', 'd'];
+for (item of elements) {
+  console.log(item);
+}
+
+// array methods - for looping over an array
 // forEach
 // map, reduce, filter = returns new arr
 // some, every = returns boolean value
