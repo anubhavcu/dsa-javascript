@@ -16,7 +16,7 @@ console.log(arr.toString()); // 1,2,3,4,5
 // push, pop, concat, join , reverse, shift, unshift, slice, splice, indexOf , includes
 /**
  * modifies the arr : push, pop, reverse, shift, unshift, splice
- * do NOT modify arr: concat, join, slice, indexOf, includes
+ * do NOT modify arr: concat, join, slice, indexOf, includes, toString
  * -------------------------------------------------------
  *
  * push- add item to end of arr, return new length
