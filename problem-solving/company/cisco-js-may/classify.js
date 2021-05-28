@@ -22,3 +22,4 @@ function getFactorSum(number) {
   }
   return sum;
 }
+console.log(classify(28))
