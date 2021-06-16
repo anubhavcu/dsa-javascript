@@ -25,6 +25,7 @@ console.log(arr.toString()); // 1,2,3,4,5
  * shift - remove first item of arr - return removed item
  * reverse - returns modified arr
  * splice - returns deleted arr
+ * sort - returns the modified arr
  * --------------------------------
  *
  * concat - return new arr
@@ -32,6 +33,7 @@ console.log(arr.toString()); // 1,2,3,4,5
  * slice - returns a shallow copy portion of arr (from start to end - 1 index)
  * indexOf - returns the first Index at which given element is found or -1
  * includes - returns boolean value
+ * toString - return a string
  */
 
 console.log(arr.push(100));

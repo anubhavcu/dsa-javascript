@@ -110,9 +110,9 @@
 // console.log(a1);
 // console.log(a2);
 
-var scalar = 'foo';
+var scalar = "foo";
 var fn = function () {
-  return 'bar';
+  return "bar";
 };
 var fn2 = function () {
   return fn;
@@ -129,7 +129,7 @@ var innerPeace = function () {
             return function () {
               return function () {
                 return function () {
-                  return '42';
+                  return "42";
                 };
               };
             };
@@ -142,7 +142,7 @@ var innerPeace = function () {
 
 function value(arg) {
   // console.log(typeof arg);
-  while (typeof arg === 'function') {
+  while (typeof arg === "function") {
     return value(arg());
   }
   console.log(arg);
@@ -163,12 +163,12 @@ var flattenObject = function (ob) {
       continue;
     }
 
-    if (typeof ob[i] == 'object') {
+    if (typeof ob[i] == "object") {
       var flatObject = flattenObject(ob[i]);
       for (var x in flatObject) {
         if (!flatObject.hasOwnProperty(x)) continue;
 
-        toReturn[i + '.' + x] = flatObject[x];
+        toReturn[i + "." + x] = flatObject[x];
       }
     } else {
       toReturn[i] = ob[i];
@@ -177,16 +177,16 @@ var flattenObject = function (ob) {
   return toReturn;
 };
 var inputObj = {
-  name: 'jane',
-  last_name: 'doe',
-  profession: 'engineer',
+  name: "jane",
+  last_name: "doe",
+  profession: "engineer",
   characteristics: {
     intelligent: true,
     punctual: false,
     experience: {
-      2012: 'college passout',
-      2014: 'mba passout',
-      2016: 'employed',
+      2012: "college passout",
+      2014: "mba passout",
+      2016: "employed",
     },
   },
 };
@@ -215,3 +215,5 @@ for (let prop in inputObj.characteristics.experience) {
 // }
 // const sum = new Sum();
 // sum.callAfter(2000, 5, 3);
+
+console.log("hello world");
