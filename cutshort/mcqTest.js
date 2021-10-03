@@ -1,4 +1,3 @@
-
 // // var num1 = 15, num2 = 1
 // // var obj = {a : 20 }
 // // with(obj){
@@ -167,15 +166,83 @@
 function nextLine(arr, x) {
   test.push(x);
   test.shift(arr[0]);
-  return arr[0] ;
+  return arr[0];
   return x;
 }
 
 var test = [1, 2, 3, 4, 5];
 
-console.log("before", +JSON.stringify(test));
+console.log('before', +JSON.stringify(test));
 console.log(nextLine(test, 6));
-console.log("after", +JSON.stringify(test));
+console.log('after', +JSON.stringify(test));
 
+console.log(JSON.stringify([1, 2, 3, 4]));
 
-console.log(JSON.stringify([1,2,3,4]))
+// -------------------------------------------------
+// some more basics
+
+let x = ['1', '2', '15', '-7', '300'];
+let y = x.sort();
+console.log(y);
+
+function func(a, b) {
+  a += 1;
+  b.push(a);
+}
+
+const a = 0;
+const b = [];
+func(a, b);
+console.log(a, b);
+
+function buildWord(sentenceList) {
+  let root = {};
+  sentenceList.forEach((sentence) => {
+    let base = root;
+    sentence.split(' ').forEach((word) => {
+      if (base[word] === undefined) {
+        base[word] = {};
+      }
+      base = base[word];
+    });
+  });
+  return root;
+}
+
+let tree = buildWord(['hello world', 'hello there']);
+console.log(tree);
+
+const promises = [3, 2, 1].map(
+  (d) =>
+    new Promise((res) => {
+      setTimeout(() => {
+        res(d);
+      }, d * 1000);
+    })
+);
+Promise.race(promises).then((val) => {
+  console.log(val);
+});
+
+function removeBlankElements(items) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].length === 0) {
+      items.splice(i, 1);
+    }
+  }
+}
+
+var names = ['rachel', '', 'meghna', '', '', 'tim'];
+removeBlankElements(names);
+console.log(names);
+
+const f = (n) => (n <= 1 ? 1 : n * f(n - 1));
+
+let g = f(4);
+console.log(g);
+
+let words = ['Hello', 'World'];
+words.forEach((word, i) => {
+  (words[i] = word.split('').reverse().join('')).toLowerCase();
+});
+console.log(words);

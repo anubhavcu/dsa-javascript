@@ -131,3 +131,27 @@ let arr = [
   false,
   [1, null, [2, [5, 6], 5], undefined],
 ];
+var newProm = new Promise((res, rej) => {
+  let newvar = 10;
+  if (newvar % 2 == 0) {
+    res('new promise is resolved');
+  } else {
+    rej('new promise rejected');
+  }
+});
+
+var hello = true;
+let d = new Promise((res, rej) => {
+  if (hello) return res(newProm);
+  else {
+    rej('promise rejected');
+  }
+});
+
+// d.then((res) => console.log(res)).then((data) => console.log(data));
+d.then((res) => res).then((msg) => console.log(msg));
+
+for (let i = 0; i < 100; i++) {
+  let res = '';
+  if (i % 3 === 0 && i % 5 === 0) res += 'Fizz';
+}
