@@ -183,19 +183,19 @@
 // // n = [2, 3, 4];
 // console.log(n);
 
-function ajaxCall() {
-  var xmlHttp;
-  if (window.XMLHttpRequest) {
-    xmlHttp = new XMLHttpRequest();
-  }
-  xmlHttp.onreadystatechange = function () {
-    if (xmlHttp.readyState == 4 && xmlHttp.status == 404) {
-      document.getElementById('content').innerHTML = xmlHttp.responseText;
-    }
-  };
-  xmlHttp.open('GET', 'userguide.txt', true);
-  xmlHttp.send();
-}
+// function ajaxCall() {
+//   var xmlHttp;
+//   if (window.XMLHttpRequest) {
+//     xmlHttp = new XMLHttpRequest();
+//   }
+//   xmlHttp.onreadystatechange = function () {
+//     if (xmlHttp.readyState == 4 && xmlHttp.status == 404) {
+//       document.getElementById('content').innerHTML = xmlHttp.responseText;
+//     }
+//   };
+//   xmlHttp.open('GET', 'userguide.txt', true);
+//   xmlHttp.send();
+// }
 
 // for (var i = 0; i < 10; i++) {
 //   setTimeout(() => {
